@@ -6,32 +6,6 @@
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 	
-	<filter>
-		<filter-name>AutentificationFilter</filter-name>
-		<filter-class>edu.bsuir.sh.Filters.AutentificationFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>AutentificationFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-	
-	<filter>
-		<filter-name>AutorizationFilter</filter-name>
-		<filter-class>edu.bsuir.sh.Filters.AutorizationFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>AutorizationFilter</filter-name>
-		<url-pattern>/ChoseTable</url-pattern>
-	</filter-mapping>
-	
-	<servlet>
-		<servlet-name>PrivatePage</servlet-name>
-		<servlet-class>edu.bsuir.sh.PrivatePage</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>PrivatePage</servlet-name>
-		<url-pattern>/PrivatePage</url-pattern>
-	</servlet-mapping>
 	
 	<servlet>
 		<servlet-name>Login</servlet-name>
@@ -52,6 +26,15 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>PrivatePage</servlet-name>
+		<servlet-class>edu.bsuir.sh.PrivatePage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PrivatePage</servlet-name>
+		<url-pattern>/PrivatePage</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>ErrorPage</servlet-name>
 		<servlet-class>edu.bsuir.sh.common.ErrorPage</servlet-class>
 	</servlet>
@@ -59,7 +42,6 @@
 		<servlet-name>ErrorPage</servlet-name>
 		<url-pattern>/ErrorPage</url-pattern>
 	</servlet-mapping>
-	
 	
 	<servlet>
 		<servlet-name>GroupView</servlet-name>
@@ -115,58 +97,5 @@
 		<url-pattern>/UserView</url-pattern>
 	</servlet-mapping>
 	
-	<servlet>
-		<servlet-name>GroupEdit</servlet-name>
-		<servlet-class>edu.bsuir.sh.edit_tables.GroupEdit</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>GroupEdit</servlet-name>
-		<url-pattern>/GroupEdit</url-pattern>
-	</servlet-mapping>
 	
-	<servlet>
-		<servlet-name>MarksEdit</servlet-name>
-		<servlet-class>edu.bsuir.sh.edit_tables.MarksEdit</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>MarksEdit</servlet-name>
-		<url-pattern>/MarksEdit</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>ProfessorsEdit</servlet-name>
-		<servlet-class>edu.bsuir.sh.edit_tables.ProfessorsEdit</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ProfessorsEdit</servlet-name>
-		<url-pattern>/ProfessorsEdit</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>StudentsEdit</servlet-name>
-		<servlet-class>edu.bsuir.sh.edit_tables.StudentsEdit</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>StudentsEdit</servlet-name>
-		<url-pattern>/StudentsEdit</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>StudiesEdit</servlet-name>
-		<servlet-class>edu.bsuir.sh.edit_tables.StudiesEdit</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>StudiesEdit</servlet-name>
-		<url-pattern>/StudiesEdit</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>UserEdit</servlet-name>
-		<servlet-class>edu.bsuir.sh.edit_tables.UserEdit</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UserEdit</servlet-name>
-		<url-pattern>/UserEdit</url-pattern>
-	</servlet-mapping>
-
 </web-app>

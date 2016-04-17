@@ -1,10 +1,9 @@
 package edu.bsuir.sh.beans;
-import edu.bsuir.sh.common.Role;
 
 public class User {
 	private String name;
 	private String password;
-	private Role role;
+	private String role;
 	
 	public String getName() {
 		return name;
@@ -18,10 +17,10 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public Role getRole() {
+	public String getRole() {
 		return role;
 	}
-	public void setRole(Role role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 }
