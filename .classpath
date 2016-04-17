@@ -18,7 +18,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Rufus/workspace/StudentHelper/gson-2.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Rufus/workspace/StudentHelper/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Rufus/workspace/StudentHelper/WebContent/WEB-INF/lib/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Rufus/workspace/StudentHelper/WebContent/WEB-INF/lib/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
 </classpath>

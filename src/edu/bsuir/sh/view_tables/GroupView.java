@@ -43,14 +43,28 @@ public class GroupView extends HttpServlet {
 		group_list.add(gr1);
 		group_list.add(gr2);
 		
-		String json_db_str = new Gson().toJson(group_list);
-		System.out.println(json_db_str);
+		String json_db = new Gson().toJson(group_list);
+		System.out.println(json_db.toString());
 		//request.setAttribute("json_arr", json_db_str);
 		
+		/*
+		JSONObject jo1 = new JSONObject();
+		jo1.put("some_key", 1);
+		jo1.put("some_key1", 8);
+		
+		JSONObject jo2 = new JSONObject();
+		jo2.put("some_key", 4);
+		jo2.put("some_key1", 6);
+		
+		JSONArray joarr = new JSONArray();
+		joarr.add(jo1);
+		joarr.add(jo2);
+		*/
 		//transfer json string to jsp
 	    response.setContentType("application/json");
 	    response.setCharacterEncoding("UTF-8");
-		response.getWriter().write(json_db_str);
+		response.getWriter().write(json_db);
+		
 		//? to generic table builder jsp
 		//request.getRequestDispatcher("/draw_table.jsp").forward(request, response);
 	}

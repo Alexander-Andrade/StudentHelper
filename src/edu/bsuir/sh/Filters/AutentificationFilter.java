@@ -23,6 +23,7 @@ public class AutentificationFilter implements Filter {
 		HttpServletResponse response = (HttpServletResponse)resp;
 		HttpServletRequest request = (HttpServletRequest)req;
 		
+		System.out.println("Autentification filter!!!");
 		System.out.println(request.getRequestURI());
 		System.out.println(request.getParameter("user"));
 		String url = request.getRequestURI();
