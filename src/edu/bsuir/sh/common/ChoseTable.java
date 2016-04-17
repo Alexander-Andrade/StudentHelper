@@ -41,13 +41,11 @@ public class ChoseTable extends HttpServlet {
 	}
 	
 	protected void  handleChoise(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-		System.out.println("here");
 		String table_name = request.getParameter("table");
 		//request.setAttribute("tables", table_name);
-		System.out.println(table_name);
 		String s = servletsNamesFactory(table_name) ;
-		System.out.println(s);
-		
+		//without /
+		request.setAttribute("view_serv_name", s.substring(1));
 		request.getRequestDispatcher(s).forward(request, response);
 	}
 
