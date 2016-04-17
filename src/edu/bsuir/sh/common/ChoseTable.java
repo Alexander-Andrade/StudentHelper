@@ -13,20 +13,21 @@ public class ChoseTable extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Map<String, String> tables_servlets;
   
+	private void fillTablesServletsMap(){
+	    	tables_servlets = new HashMap<String, String>();
+	    	tables_servlets.put("groups", "/GroupView");
+	    	tables_servlets.put("users", "/UsersView");
+	    	tables_servlets.put("students", "/StudentsView");
+	    	tables_servlets.put("marks", "/MarksView");
+	    	tables_servlets.put("studies", "/StudiesView");
+	    	tables_servlets.put("professors", "/ProfessorsView");
+	}
+	
     public ChoseTable() {
         super();
+        fillTablesServletsMap();
     }
     
-    private void fillTablesServletsMap(){
-    	tables_servlets = new HashMap<String, String>();
-    	tables_servlets.put("groups", "/GroupView");
-    	tables_servlets.put("users", "/UsersView");
-    	tables_servlets.put("students", "/StudentsView");
-    	tables_servlets.put("marks", "/MarksView");
-    	tables_servlets.put("studies", "/StudiesView");
-    	tables_servlets.put("professors", "/ProfessorsView");
-    }
-	
     private String servletsNamesFactory(String button_key) {
 		return tables_servlets.get(button_key);
 	}

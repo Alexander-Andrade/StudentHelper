@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app id="WebApp_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	
+	<display-name>StudentHelper</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
 	<filter>
 		<filter-name>AutentificationFilter</filter-name>
 		<filter-class>edu.bsuir.sh.Filters.AutentificationFilter</filter-class>
@@ -28,10 +33,6 @@
 		<url-pattern>/PrivatePage</url-pattern>
 	</servlet-mapping>
 	
-	<display-name>StudentHelper</display-name>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-	</welcome-file-list>
 	<servlet>
 		<servlet-name>Login</servlet-name>
 		<servlet-class>edu.bsuir.sh.Login</servlet-class>
@@ -167,5 +168,5 @@
 		<servlet-name>UserEdit</servlet-name>
 		<url-pattern>/UserEdit</url-pattern>
 	</servlet-mapping>
-	
+
 </web-app>
