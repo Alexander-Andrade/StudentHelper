@@ -1,20 +1,20 @@
 package edu.bsuir.sh.beans;
 
 public class Group {
-	private String group_number;
-	private double avg_mark;
+	private String groupNumber;
+	private double avgMark;
 	
-	public String getGroup_number() {
-		return group_number;
+	public String getGroupNumber() {
+		return groupNumber;
 	}
-	public void setGroup_number(String group_number) {
-		this.group_number = group_number;
+	public void setGroupNumber(String groupNumber) {
+		this.groupNumber = groupNumber;
 	}
-	public double getAvg_mark() {
-		return avg_mark;
+	public double getAvgMark() {
+		return avgMark;
 	}
-	public void setAvg_mark(double avg_mark) {
-		this.avg_mark = avg_mark;
+	public void setAvgMark(double avgMark) {
+		this.avgMark = avgMark;
 	}
 	
 }
