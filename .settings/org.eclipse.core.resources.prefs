@@ -1,9 +1,8 @@
-#Fri Apr 15 09:50:24 MSD 2016
-encoding//WebContent/index.html=UTF-8
+eclipse.preferences.version=1
 encoding//WebContent/AccessDenied.jsp=ISO-8859-1
 encoding//WebContent/ChoseTable.jsp=ISO-8859-1
-encoding//WebContent/helloUser.jsp=ISO-8859-1
-eclipse.preferences.version=1
-encoding//WebContent/draw_table.jsp=ISO-8859-1
-encoding//WebContent/WelcomPage.jsp=ISO-8859-1
+encoding//WebContent/DrawTable.jsp=ISO-8859-1
 encoding//WebContent/ErrorPage.jsp=ISO-8859-1
+encoding//WebContent/HelloUser.jsp=ISO-8859-1
+encoding//WebContent/WelcomPage.jsp=ISO-8859-1
+encoding//WebContent/index.html=UTF-8

@@ -4,10 +4,9 @@
 <html>
 <head>
 <body>
-
-	<form action="Login" method= "post">
-		<input name="user" type="text" value="user">
-		<input name="password" type="password" value="password">
+	<form action="LoginServ" method= "post">
+		<input name="user_name" type="text" >
+		<input name="password" type="password">
 		<input type="submit" value="login">		
 	</form>
 

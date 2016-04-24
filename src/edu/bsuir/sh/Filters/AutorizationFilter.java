@@ -1,6 +1,8 @@
 package edu.bsuir.sh.Filters;
 
+import java.awt.List;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,28 +16,31 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class AutorizationFilter implements Filter {
-	
-    public AutorizationFilter() {
-    }
+import edu.bsuir.sh.beans.UserBean;
 
+public class AutorizationFilter implements Filter {
+	private ArrayList<String> accessList;
+    public AutorizationFilter() {
+    	accessList = new ArrayList<String>();
+    	fillAccessByRoleList();
+    }
+    private void fillAccessByRoleList(){
+    	accessList.add("admin");
+    	accessList.add("professor");
+    }
+    private boolean hasRoleAccess(String role){
+    	return accessList.contains(role.toLowerCase());
+    }
 	public void destroy() {
 	}
 		
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws IOException, ServletException {
 		HttpServletResponse response = (HttpServletResponse)resp;
 		HttpServletRequest request = (HttpServletRequest)req;
-		
-		System.out.println("autorization filter!!!");
-		System.out.println(request.getRequestURI() + "autority filter");
-		
-		String user = (String)request.getSession().getAttribute("user");
-		System.out.println(user);
-		String password = (String)request.getSession().getAttribute("password");
-		System.out.println(password);
-		
-		if(user.endsWith("admin") || user.endsWith("teacher")){	//css jsp -> pass
-			// pass the request along the filter chain
+	
+		String url = request.getRequestURI();
+		UserBean user = (UserBean)request.getSession().getAttribute("user");
+		if (hasRoleAccess(user.getRole()) || url.endsWith(".css") || url.endsWith(".jsp")){
 			chain.doFilter(request, response);
 		}
 		else{
